@@ -7,7 +7,7 @@ from django.shortcuts import render,redirect
 def welcome(request):
     return render(request,'welcome.html')
 
-def news_of_day(request):
+def news_today(request):
     date = dt.date.today()
     html = f'''
         <html>
