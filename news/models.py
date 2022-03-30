@@ -46,4 +46,9 @@ class Article(models.Model):
     def days_news(cls,date):
         news = cls.objects.filter(pub_date__date = date)
         return news
+
+class NewsLetterRecipients(models.Model):
+    name = models.CharField(max_length = 30)
+    email = models.EmailField()
+       
        
